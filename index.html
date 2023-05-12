@@ -63,13 +63,17 @@
 
                 <div class="usserStatic">
 
-                    <div class="userStaticLeft"> 
-                        <div> <img class="imgIo" src="./img/avatar_io.jpg" alt=""> </div>
-                        <span class="centroV">Sofia  </span>
+                    <div class="mnsLeft"> 
+                        <div class="imgMmnsLeft "> <img  :src="contacts[0].avatar" alt=""> </div>
+                        <div >
+                            <h3>{{contacts[0].name}}</h3>
+                            <p class="fg-grey-icon">Ultimo accesso oggi alle 12:00</p>
+                        </div>
                     </div>
-                    <div class="userStaticRight">
+                    
+                    <div class="mnsRight centro">
                         <div><i class="fa-solid fa-magnifying-glass fg-grey-icon"></i></div>
-                        <div><i class="fa-solid fa-message fg-grey-icon "></i></div>
+                        <div><i class="fa-solid fa-paperclip  fg-grey-icon"></i></div>
                         <div><i class="fa-solid fa-ellipsis-vertical fg-grey-icon "></i></div>
                     </div>
 
