@@ -44,11 +44,12 @@
                 </div>
 
                 <div class="usersConteiner">
-                    <div class="user  bg-user">
-                        <div class="userImg"> <img src="./img/avatar_1.jpg" alt=""></div>
+
+                    <div v-for="utenti,i in contacts" class="user ">
+                        <div class="userImg"> <img :src="contacts[i].avatar" alt=""></div>
                         <div class="userName">
-                            <h3>Michele</h3>
-                            <p>Ultimo messaggio inviato</p>
+                            <h3>{{contacts[i].name}}</h3>
+                            <p class="fg-grey-icon">Ultimo messaggio inviato</p>
                         </div>
                         <div class="userHours">12:00</div>
                     </div>
@@ -59,6 +60,20 @@
             </div>
 
             <div class="msn">
+
+                <div class="usserStatic">
+
+                    <div class="userStaticLeft"> 
+                        <div> <img class="imgIo" src="./img/avatar_io.jpg" alt=""> </div>
+                        <span class="centroV">Sofia  </span>
+                    </div>
+                    <div class="userStaticRight">
+                        <div><i class="fa-solid fa-magnifying-glass fg-grey-icon"></i></div>
+                        <div><i class="fa-solid fa-message fg-grey-icon "></i></div>
+                        <div><i class="fa-solid fa-ellipsis-vertical fg-grey-icon "></i></div>
+                    </div>
+
+                </div>
 
             </div>
 
