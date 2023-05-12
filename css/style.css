@@ -1,3 +1,223 @@
-html{
-background-color: brown;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
+
+/************************************/
+/************** COLOR ***************/
+
+
+.bg-white {background-color: white;}
+.bg-black {background-color: black;}
+.bg-user {background-color: #e9ebeb;}
+
+
+.fg-white {color: white;}
+.fg-black {color: black;}
+.fg-grey-icon {color:#b1b1b1;}
+.fg-skyblue {color:  #8edafc;}
+
+
+.centro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centroV{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+/************************************/
+/************** GLOBAL ***************/
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    
+}
+
+.bgTop{
+    width: 100vw;
+    height: 8rem;
+    background-color: #009688;
+    
+}
+
+.bgBotton{
+    width: 100vw;
+    height: calc(100vh - 8rem);
+    background-color: #d8dbd5;
+
+}
+
+.chatContainer{
+    max-width: 80vw;
+    min-height: 96vh;
+    left: 10vw;
+    top: 2vh;
+    position: absolute;
+    display: flex;
+}
+
+
+/************************************/
+/************** USER ***************/
+.users{
+    min-width:28vw;
+    height: 96vh;
+    background-color: white;
+}
+
+
+/***** User Static ******/
+
+
+.usserStatic{
+    width: 100%;
+    height:  60px;
+    background-color: #eaeaea;
+    display: flex;
+}
+.userStaticLeft{
+    width: 50%;
+    height: 60px;
+    display: flex;
+}
+
+.userStaticLeft div{
+    width: 30%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgIo{
+    height: 85%;
+    clip-path: circle();
+}
+
+.userStaticRight{
+    width: 50%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.userStaticRight div{
+    width: 20%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+/***** Notice ******/
+
+.notice{
+    width: 100%;
+    height:  70px;
+    background-color: #8edafc;
+    display: flex;
+}
+.bell{
+    width: 17%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bell i {
+    font-size: 1.3rem;
+    padding: 0.7rem;
+    border-radius: 50%;
+}
+.notices{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/***** Searche ******/
+
+.search{
+    width: 100%;
+    height:  45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+
+}
+.searchIcon{
+    width: 17%;
+    height: 70%;
+    background-color: white;
+    border: 0.3px solid #eaeaea;
+
+}
+    
+.search input{
+    width: 80%;
+    height: 70%;
+    background-color: white;
+    border: 0.3px solid #eaeaea;
+
+}
+
+/***** User Conteiner ******/
+.usersConteiner{
+    width: 100%;
+    height: calc(100% - 175px);
+    overflow-y: auto;
+    background-color: white;
+}
+
+.user{
+    width: 100%;
+    height: 70px;
+    display: flex;
+
+}
+
+.userImg{
+    width: 20%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.userImg img{
+    height: 85%;
+    clip-path: circle();}
+.userName{
+    width: 70%;
+    height: 70px;
+    padding: 0.5rem;
+}
+.userHours{
+    width: 10%;
+    height: 70px;
+    padding: 0.5rem ;
+    margin-right: 1rem;
+}
+
+
+
+/************************************/
+/************** MSN ***************/
+.msn{
+    min-width:52vw;
+    height: 96vh;
+    background-image: url(../img/mine.jpg);
+}
+
+
+
