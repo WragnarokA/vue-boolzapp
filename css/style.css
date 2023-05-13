@@ -12,12 +12,14 @@
 .bg-white {background-color: white;}
 .bg-black {background-color: black;}
 .bg-user {background-color: #e9ebeb;}
+.bgMessSent{background-color: #d5f9ba;}
 
 
 .fg-white {color: white;}
 .fg-black {color: black;}
-.fg-grey-icon {color:#b1b1b1;}
 .fg-skyblue {color:  #8edafc;}
+.fg-grey-icon {color:#b1b1b1;}
+.fg-grey-icon2 {color:#6b7376;}
 
 
 .centro{
@@ -30,9 +32,6 @@
     align-items: center;
 }
 
-
-
-
 /************************************/
 /************** GLOBAL ***************/
 
@@ -40,23 +39,20 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    
 }
-
+    
 .bgTop{
     width: 100vw;
     height: 8rem;
     background-color: #009688;
-    
 }
 
 .bgBotton{
     width: 100vw;
     height: calc(100vh - 8rem);
     background-color: #d8dbd5;
-
 }
-
+    
 .chatContainer{
     max-width: 80vw;
     min-height: 96vh;
@@ -69,18 +65,15 @@
 
 /************************************/
 /************** USER ***************/
+
 .users{
     min-width:28vw;
     height: 96vh;
     border-right:  0.5px solid rgb(214, 211, 211);
     background-color: white;
-
 }
 
-
-
 /***** User Static ******/
-
 
 .usserStatic{
     width: 100%;
@@ -188,8 +181,6 @@
     height: 70px;
     display: flex;
     border-top:  0.5px solid #e9ebeb;
-
-
 }
 
 .userImg{
@@ -199,6 +190,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .userImg img{
     height: 85%;
     clip-path: circle();}
@@ -212,19 +204,18 @@
     height: 70px;
     padding: 0.5rem ;
     margin-right: 1rem;
+    color: #b1b1b1;
+
 }
-
-
-
-/************************************/
-/************** MSN ***************/
+/**************************************************************/
+/****************************** MSN *************************/
 .msn{
     min-width:52vw;
     height: 96vh;
-    background-image: url(../img/mine.jpg);
-    word-wrap: break-word;
+    display: flex;
+    flex-wrap: wrap;
 }
-/************** MSN STATIC LEFT ***************/
+/********* MSN STATIC  **********/
 
 .mnsLeft {
     width: 50%;
@@ -244,8 +235,6 @@
     clip-path: circle();
 }
 
-
-/************** MSN STATIC RIGHT ***************/
 .mnsRight {
     width: 50%;
     height: 60px;
@@ -255,8 +244,96 @@
     justify-content: flex-end;
 }
 .mnsRight div{
-    width: 7%;
+    width: 8%;
+    font-size: 1.3rem;
 }
+/********** MESSAGES ***********/
+
+.messages{
+    width: 100%;
+    height: calc(96vh - 120px);
+    background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 3rem 6rem;
+}
+/**** MESSAGES SENT ****/
+
+.messageSent{
+    height: 3.1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.message{
+    width: 18rem;
+    height: 3.1rem;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+}
+.messageHours{
+    width: 30px;
+    color:  #b1b1b1;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: self-end;
+}
+/**** MESSAGES RECEIVET ****/
+.messageReceived{
+    height: 3.1rem;
+    display: flex;
+}
+
     
+/********** TYPE MESSAGES ***********/
+ 
+.typeMessages {
+    width: 100%;
+    height: 60px;
+    background-color: #f3eeea;
+    display: flex;
+} 
+.textMessage{
+    width: 80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textMessage input{
+    width: 99%;
+    height: 70%;
+    border: none;
+    border-radius: 5px;
+    padding-left: 1rem;
+}
+
+
+.iconsMessages{
+    width: 10%;
+    height: 60px;
+    font-size: 1.3rem;
+}
+
+
+
+
+
+
+
+
+   
+
+
+
+
+    
+
+
 
 
