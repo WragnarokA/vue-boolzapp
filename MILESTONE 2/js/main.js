@@ -167,12 +167,21 @@ createApp({
             ],
 
             activeUtente: 0,
-            casa: 'jsjsjsj',
+        
 
 
         }
     },
     methods: {
+        // sentMessage(message){
+        //     let classe = "messageSent";
+
+        //     if (message.status == "received") {
+        //         classe = "messageReceived";
+        //     }
+        //     return classe;
+
+        // }
 
 
         

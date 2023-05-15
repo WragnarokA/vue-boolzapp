@@ -86,16 +86,16 @@
 
                 <div class="messages">
                 
-                    <div  v-for="mess,i in contacts[activeUtente].messages" class="cambioStatus(i)">
+                    <div  v-for="mess,i in contacts[activeUtente].messages" class="" :class="(mess.status=='received') ? 'messageReceived' : 'messageSent'">
                         <div class="message bgMessSent" >
                             <div class="centro">
-                              
+                              {{mess.message}}
                             </div>
-                            <div class="messageHours">  {{ contacts[activeUtente].messages[i].date }} </div>
+                            <div class="messageHours">  {{ mess.date }} </div>
                         </div>
                     </div>
 
-                    <!-- <div class="messageReceived     messageSent">
+                    <!-- <div class="messageReceived     messageSent">z
                         <div class="message bg-white">
                             <div class="centro">
                                 Ricordati di stendere i panni
