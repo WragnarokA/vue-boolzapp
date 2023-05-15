@@ -1,0 +1,340 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/************************************/
+/************** COLOR ***************/
+
+
+.bg-white {background-color: white;}
+.bg-black {background-color: black;}
+.bg-user {background-color: #e9ebeb;}
+.bgMessSent{background-color: #d5f9ba;}
+
+
+.fg-white {color: white;}
+.fg-black {color: black;}
+.fg-skyblue {color:  #8edafc;}
+.fg-grey-icon {color:#b1b1b1;}
+.fg-grey-icon2 {color:#6b7376;}
+
+
+.centro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centroV{
+    display: flex;
+    align-items: center;
+}
+
+/************************************/
+/************** GLOBAL ***************/
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+    
+.bgTop{
+    width: 100vw;
+    height: 8rem;
+    background-color: #009688;
+}
+
+.bgBotton{
+    width: 100vw;
+    height: calc(100vh - 8rem);
+    background-color: #d8dbd5;
+}
+    
+.chatContainer{
+    max-width: 80vw;
+    min-height: 96vh;
+    left: 10vw;
+    top: 2vh;
+    position: absolute;
+    display: flex;
+}
+
+
+/************************************/
+/************** USER ***************/
+
+.users{
+    min-width:28vw;
+    height: 96vh;
+    border-right:  0.5px solid rgb(214, 211, 211);
+    background-color: white;
+}
+
+/***** User Static ******/
+
+.usserStatic{
+    width: 100%;
+    height:  60px;
+    background-color: #eaeaea;
+    display: flex;
+}
+.userStaticLeft{
+    width: 50%;
+    height: 60px;
+    display: flex;
+}
+
+.userStaticLeft div{
+    width: 30%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgIo{
+    height: 85%;
+    clip-path: circle();
+}
+
+.userStaticRight{
+    width: 50%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.userStaticRight div{
+    width: 15%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+/***** Notice ******/
+
+.notice{
+    width: 100%;
+    height:  70px;
+    background-color: #8edafc;
+    display: flex;
+}
+.bell{
+    width: 17%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bell i {
+    font-size: 1.3rem;
+    padding: 0.7rem;
+    border-radius: 50%;
+}
+.notices{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/***** Searche ******/
+
+.search{
+    width: 100%;
+    height:  45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+
+}
+.searchIcon{
+    width: 17%;
+    height: 70%;
+    background-color: white;
+    border: 0.3px solid #eaeaea;
+
+}
+    
+.search input{
+    width: 80%;
+    height: 70%;
+    background-color: white;
+    border: 0.3px solid #eaeaea;
+
+}
+
+/***** User Conteiner ******/
+.usersConteiner{
+    width: 100%;
+    height: calc(100% - 175px);
+    overflow-y:scroll;
+    background-color: white;
+}
+
+.user{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    border-top:  0.5px solid #e9ebeb;
+}
+
+.userImg{
+    width: 20%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userImg img{
+    height: 85%;
+    clip-path: circle();}
+.userName{
+    width: 70%;
+    height: 70px;
+    padding: 0.5rem;
+}
+.userHours{
+    width: 10%;
+    height: 70px;
+    padding: 0.5rem ;
+    margin-right: 1rem;
+    color: #b1b1b1;
+
+}
+/**************************************************************/
+/****************************** MSN *************************/
+.msn{
+    min-width:52vw;
+    height: 96vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+/********* MSN STATIC  **********/
+
+.mnsLeft {
+    width: 50%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.imgMmnsLeft{
+    width: 20%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgMmnsLeft img{
+    height: 85%;
+    clip-path: circle();
+}
+
+.mnsRight {
+    width: 50%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
+}
+.mnsRight div{
+    width: 8%;
+    font-size: 1.3rem;
+}
+/********** MESSAGES ***********/
+
+.messages{
+    width: 100%;
+    height: calc(96vh - 120px);
+    background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 3rem 6rem;
+}
+/**** MESSAGES SENT ****/
+
+.messageSent{
+    height: 3.1rem;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.message{
+    width: 20rem;
+    height: 3.1rem;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+}
+.messageHours{
+    width: 3.5rem;
+    color:  #b1b1b1;
+    font-size: 0.6rem;
+    display: flex;
+    align-items: self-end;
+}
+/**** MESSAGES RECEIVET ****/
+.messageReceived{
+    height: 3.1rem;
+    display: flex;
+}
+
+    
+/********** TYPE MESSAGES ***********/
+ 
+.typeMessages {
+    width: 100%;
+    height: 60px;
+    background-color: #f3eeea;
+    display: flex;
+} 
+.textMessage{
+    width: 80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textMessage input{
+    width: 99%;
+    height: 70%;
+    border: none;
+    border-radius: 5px;
+    padding-left: 1rem;
+}
+
+
+.iconsMessages{
+    width: 10%;
+    height: 60px;
+    font-size: 1.3rem;
+}
+
+
+
+
+
+
+
+
+   
+
+
+
+
+    
+
+
+
+
