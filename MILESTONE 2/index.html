@@ -86,10 +86,10 @@
 
                 <div class="messages">
                 
-                    <div  v-for="mess,i in contacts[activeUtente].messages" :class="cambioStatus(i)">
+                    <div  v-for="mess,i in contacts[activeUtente].messages" class="cambioStatus(i)">
                         <div class="message bgMessSent" >
                             <div class="centro">
-                               {{ contacts[activeUtente].messages[i].message }}
+                              
                             </div>
                             <div class="messageHours">  {{ contacts[activeUtente].messages[i].date }} </div>
                         </div>
