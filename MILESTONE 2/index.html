@@ -48,7 +48,7 @@
 
                 <div class="usersConteiner">
 
-                    <div v-for="utenti,i in contacts" class="user" @click="activeUtente = i">
+                    <div v-for="utenti,i in contacts" class="user "   @click="activeUtente = i">
                         <div class="userImg"> <img :src="contacts[i].avatar" alt=""></div>
                         <div class="userName">
                             <h3>{{contacts[i].name}}</h3>
@@ -87,7 +87,7 @@
                 <div class="messages">
                 
                     <div  v-for="mess,i in contacts[activeUtente].messages" class="" :class="(mess.status=='received') ? 'messageReceived' : 'messageSent'">
-                        <div class="message bgMessSent" >
+                        <div :class="(mess.status=='received') ? 'message bg-white' : 'message bgMessSent'" >
                             <div class="centro">
                               {{mess.message}}
                             </div>
