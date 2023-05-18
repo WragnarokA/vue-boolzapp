@@ -2,6 +2,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+  
             contacts: [
                 {
                     name: 'Michele',
@@ -163,14 +164,13 @@ createApp({
                             status: 'received'
                         }
                     ],
-                }
+                },
             ],
-
+            
+            messText: 0,
             activeUtente: 0,
-            activeMessage: 0,
-        
-
-
+            newMessage: "",  // da inserire nel input con v-model e dentro message del nuovoMsg cosi viene collegato!!
+            searchText:"",
         }
     },
     methods: {
@@ -180,25 +180,76 @@ createApp({
             classe = "bgUser"
            }
            return classe;
+        },
+
+        addMessage() {
+            let nuovoMsg = {
+                date: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString() ,
+                message: this.newMessage ,
+                status: 'sent',
+            };
+            this.contacts[this.activeUtente].messages.push(nuovoMsg)
+            this.newMessage = "";
+
+            setTimeout(() => {
+                this.contacts[this.activeUtente].messages.push({
+                    date: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString() ,
+                    message: 'ok',
+                    status: 'received'
+                });
+
+            }, 1000);
+        },
+
+        searchContac() { // collegata al input con un @keyup, 
+            // nello stesso input viene collegato con un v-model searchText
+            const toSearch = this.searchText.toLowerCase(); 
+            
+            this.contacts.forEach((utenti) =>{  
+                 // utenti ....vinen pressa dal v-for del html fatto per visualizzare i contatti 
+                const contactName = utenti.name.toLowerCase();
+                 
+                // if (contactName.includes(toSearch)) {    
+                //     utenti.visible = true;
+                // } else {
+                //     utenti.visible = false;
+                // }
+
+                utenti.visible = contactName.includes(toSearch);
+                // alla fine per poter visualizzare gli utenti cercati si aggiunge un
+                // v-show="utenti.visible"  sempre nel div dei contatti in modo che 
+                // sara visibile sé  true (default) o false
+
+            });
+           
+        },
+
+
+        deleteMsg(i) {
+             this.contacts[this.activeUtente].messages.splice(i, 1);
+             
         }
-       
-        
-        // sentMessage(message){
-        //     let classe = "messageSent";
-
-        //     if (message.status == "received") {
-        //         classe = "messageReceived";
-        //     }
-        //     return classe;
-
-        // }
-
-
-        
-
-
-
+           
     }
 
 }).mount('#app')
+
+
+
+
+           
+           
+
+                    
+
+               
+
+        
+
+
+
+
+
+
+
 

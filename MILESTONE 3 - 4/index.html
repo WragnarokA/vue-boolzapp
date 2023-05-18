@@ -43,18 +43,19 @@
 
                 <div class="search">
                     <div class="searchIcon centro"><i class="fa-solid fa-magnifying-glass fg-grey-icon"></i></div>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input v-model="searchText" @keyup="searchContac"  type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
 
                 <div class="usersConteiner">
 
-                    <div v-for="utenti,i in contacts" class="user "  :class="getCAmbiaClassse(i)" @click="activeUtente = i">
+                    <div v-for="utenti,i in contacts"  v-show="utenti.visible" class="user "  :class="getCAmbiaClassse(i)" @click="activeUtente = i">
                         <div class="userImg"> <img :src="contacts[i].avatar" alt=""></div>
                         <div class="userName">
                             <h3>{{contacts[i].name}}</h3>
                             <p class="fg-grey-icon">Ultimo messaggio inviato</p>
                         </div>
                         <div class="userHours">12:00</div>
+                       
                     </div>
 
                 </div>
@@ -84,26 +85,18 @@
 
                 </div>
 
-                <div class="messages">
+                <div class="messages" >
                 
-                    <div  v-for="mess,i in contacts[activeUtente].messages" class="" :class="(mess.status=='received') ? 'messageReceived' : 'messageSent'">
+                    <div  v-for="mess,i in contacts[activeUtente].messages"  :class="(mess.status=='received') ? 'messageReceived' : 'messageSent'">
                         <div :class="(mess.status=='received') ? 'message bg-white' : 'message bgMessSent'" >
                             <div class="centro">
-                              {{mess.message}}
+                              {{mess.message}} 
                             </div>
                             <div class="messageHours">  {{ mess.date }} </div>
+                            <div class="messageHours" @click="deleteMsg(i)"> Elimina </div>
                         </div>
                     </div>
 
-                    <!-- <div class="messageReceived     messageSent">z
-                        <div class="message bg-white">
-                            <div class="centro">
-                                Ricordati di stendere i panni
-                            </div>
-                            <div class="messageHours"> 15:30</div>
-                        </div>
-                    </div> -->
-                            
 
                        
                 </div>
@@ -112,7 +105,7 @@
 
                     <div  class="iconsMessages centro"> <i class="fa-regular fa-face-smile fg-grey-icon2"></i></div>
 
-                    <div class="textMessage"> <input type="text" placeholder="Srivi un messaggio"> </div>
+                    <div class="textMessage"> <input  v-model="newMessage" @keyup.enter="addMessage()" type="text" placeholder="Srivi un messaggio"> </div>
 
                     <div class="iconsMessages centro"><i class="fa-solid fa-microphone fg-grey-icon2"></i></div>
                     

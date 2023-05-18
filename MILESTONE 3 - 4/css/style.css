@@ -215,7 +215,7 @@
 /**************************************************************/
 /****************************** MSN *************************/
 .msn{
-    min-width:52vw;
+    width:52vw;
     height: 96vh;
     display: flex;
     flex-wrap: wrap;
@@ -255,12 +255,11 @@
 /********** MESSAGES ***********/
 
 .messages{
-    width: 100%;
+    width:52vw;
     height: calc(96vh - 120px);
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     padding: 3rem 6rem;
 }
