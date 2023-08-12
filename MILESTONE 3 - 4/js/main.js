@@ -2,7 +2,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-  
+
             contacts: [
                 {
                     name: 'Michele',
@@ -166,26 +166,26 @@ createApp({
                     ],
                 },
             ],
-            
+
             messText: 0,
             activeUtente: 0,
             newMessage: "",  // da inserire nel input con v-model e dentro message del nuovoMsg cosi viene collegato!!
-            searchText:"",
+            searchText: "",
         }
     },
     methods: {
-        getCAmbiaClassse(i){
+        getCAmbiaClassse(i) {
             let classe = "";
-           if( this.activeUtente == i) {
-            classe = "bgUser"
-           }
-           return classe;
+            if (this.activeUtente == i) {
+                classe = "bgUser"
+            }
+            return classe;
         },
 
         addMessage() {
             let nuovoMsg = {
-                date: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString() ,
-                message: this.newMessage ,
+                date: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString(),
+                message: this.newMessage,
                 status: 'sent',
             };
             this.contacts[this.activeUtente].messages.push(nuovoMsg)
@@ -193,8 +193,8 @@ createApp({
 
             setTimeout(() => {
                 this.contacts[this.activeUtente].messages.push({
-                    date: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString() ,
-                    message: 'ok',
+                    date: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString(),
+                    message: 'Ciao, come stai?',
                     status: 'received'
                 });
 
@@ -203,12 +203,12 @@ createApp({
 
         searchContac() { // collegata al input con un @keyup, 
             // nello stesso input viene collegato con un v-model searchText
-            const toSearch = this.searchText.toLowerCase(); 
-            
-            this.contacts.forEach((utenti) =>{  
-                 // utenti ....vinen pressa dal v-for del html fatto per visualizzare i contatti 
+            const toSearch = this.searchText.toLowerCase();
+
+            this.contacts.forEach((utenti) => {
+                // utenti ....vinen pressa dal v-for del html fatto per visualizzare i contatti 
                 const contactName = utenti.name.toLowerCase();
-                 
+
                 // if (contactName.includes(toSearch)) {    
                 //     utenti.visible = true;
                 // } else {
@@ -221,15 +221,15 @@ createApp({
                 // sara visibile sé  true (default) o false
 
             });
-           
+
         },
 
 
         deleteMsg(i) {
-             this.contacts[this.activeUtente].messages.splice(i, 1);
-             
+            this.contacts[this.activeUtente].messages.splice(i, 1);
+
         }
-           
+
     }
 
 }).mount('#app')
@@ -237,14 +237,14 @@ createApp({
 
 
 
-           
-           
 
-                    
 
-               
 
-        
+
+
+
+
+
 
 
 
